@@ -12,6 +12,7 @@ class CityTableViewCell: UITableViewCell {
     static let identifier = "CityTableViewCell"
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var coordLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
