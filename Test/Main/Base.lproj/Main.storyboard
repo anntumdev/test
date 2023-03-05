@@ -56,6 +56,7 @@
                     <navigationItem key="navigationItem" id="BiM-h2-iEQ"/>
                     <connections>
                         <outlet property="citiesTableView" destination="sEf-xs-mMk" id="l1M-hC-t0x"/>
+                        <outlet property="searchBar" destination="E61-rd-4RW" id="qgm-0d-Kbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

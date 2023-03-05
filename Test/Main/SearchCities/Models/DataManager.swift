@@ -21,10 +21,10 @@ class DataManager {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let cities = try decoder.decode([City].self, from: data)
+                let sortesCities = cities.sorted(by: {($0.name.lowercased(), $0.country.lowercased()) < ($1.name.lowercased(), $1.country.lowercased())})
                 DispatchQueue.main.async {
-                    let array = Array(cities.prefix(100).sorted{$0.name < $1.name})
-                    self.cities = array
-                    completion(.success(array))
+                    self.cities = sortesCities
+                    completion(.success(sortesCities))
                 }
             } catch {
                 DispatchQueue.main.async {
