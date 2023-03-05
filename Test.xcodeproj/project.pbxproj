@@ -17,6 +17,7 @@
 		95D2A8D929B3C81F00CB6340 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D2A8D729B3C81F00CB6340 /* CityTableViewCell.xib */; };
 		95D2A8DB29B3C86800CB6340 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2A8DA29B3C86800CB6340 /* City.swift */; };
 		95D2A8DD29B3F08B00CB6340 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2A8DC29B3F08B00CB6340 /* DataManager.swift */; };
+		95D2A8E129B520A000CB6340 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2A8E029B520A000CB6340 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		95D2A8D729B3C81F00CB6340 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		95D2A8DA29B3C86800CB6340 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		95D2A8DC29B3F08B00CB6340 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		95D2A8E029B520A000CB6340 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		95D2A8D329B3C78200CB6340 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				95D2A8DF29B517EC00CB6340 /* Map */,
 				95D2A8D429B3C7AB00CB6340 /* SearchCities */,
 				95D2A8C229B3BFBA00CB6340 /* Main.storyboard */,
 			);
@@ -117,6 +120,14 @@
 				95D2A8DC29B3F08B00CB6340 /* DataManager.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		95D2A8DF29B517EC00CB6340 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				95D2A8E029B520A000CB6340 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D2A8D829B3C81F00CB6340 /* CityTableViewCell.swift in Sources */,
+				95D2A8E129B520A000CB6340 /* MapViewController.swift in Sources */,
 				95D2A8DD29B3F08B00CB6340 /* DataManager.swift in Sources */,
 				95D2A8C129B3BFBA00CB6340 /* CitiesViewController.swift in Sources */,
 				95D2A8DB29B3C86800CB6340 /* City.swift in Sources */,

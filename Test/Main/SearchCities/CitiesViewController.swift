@@ -22,11 +22,9 @@ class CitiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //citiesTableView.delegate = self
+        citiesTableView.delegate = self
         citiesTableView.dataSource = self
         registerTableCells()
-    }
-    override func viewDidAppear(_ animated: Bool) {
         dataService.fetchData { [weak self] result in
             switch result {
             case .success(let cities):
@@ -35,6 +33,11 @@ class CitiesViewController: UIViewController {
             case .failure(let failure):
                 print(failure)
             }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? MapViewController, let city = sender as? City {
+            controller.city = city
         }
     }
     private func sortCities() {
@@ -56,8 +59,8 @@ extension CitiesViewController: UISearchBarDelegate {
         searchString = searchText
         let queue = DispatchQueue.global(qos: .userInitiated)
         sortWorkItem?.cancel()
-        sortWorkItem = DispatchWorkItem() {
-            self.sortCities()
+        sortWorkItem = DispatchWorkItem() { [weak self] in
+            self?.sortCities()
         }
         guard let sortWorkItem = sortWorkItem else {return}
         queue.async(execute: sortWorkItem)
@@ -81,5 +84,10 @@ extension CitiesViewController: UITableViewDataSource {
         cell.coordLabel.text = String(format: "Coordinates lat %.2f, lon %.2f", filteredCities[indexPath.row].coord.lat, filteredCities[indexPath.row].coord.lon)
         cell.nameLabel.text = "\(filteredCities[indexPath.row].name), \(filteredCities[indexPath.row].country)"
         return cell
+    }
+}
+extension CitiesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "Map", sender: filteredCities[indexPath.row])
     }
 }
