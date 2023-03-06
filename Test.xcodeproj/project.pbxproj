@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		955A226F29B694B80035F3FC /* UIViewConrtoller+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A226E29B694B70035F3FC /* UIViewConrtoller+Animation.swift */; };
 		95D2A8BD29B3BFBA00CB6340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2A8BC29B3BFBA00CB6340 /* AppDelegate.swift */; };
 		95D2A8C129B3BFBA00CB6340 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2A8C029B3BFBA00CB6340 /* CitiesViewController.swift */; };
 		95D2A8C429B3BFBA00CB6340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D2A8C229B3BFBA00CB6340 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		955A226E29B694B70035F3FC /* UIViewConrtoller+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewConrtoller+Animation.swift"; sourceTree = "<group>"; };
 		95D2A8B929B3BFBA00CB6340 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D2A8BC29B3BFBA00CB6340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D2A8C029B3BFBA00CB6340 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		955A226D29B6948F0035F3FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				955A226E29B694B70035F3FC /* UIViewConrtoller+Animation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		95D2A8B029B3BFB900CB6340 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		95D2A8BB29B3BFBA00CB6340 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				955A226D29B6948F0035F3FC /* Extensions */,
 				95D2A8D329B3C78200CB6340 /* Main */,
 				95D2A8D029B3C1CC00CB6340 /* Resources */,
 				95D2A8BC29B3BFBA00CB6340 /* AppDelegate.swift */,
@@ -208,6 +219,7 @@
 				95D2A8DD29B3F08B00CB6340 /* DataManager.swift in Sources */,
 				95D2A8C129B3BFBA00CB6340 /* CitiesViewController.swift in Sources */,
 				95D2A8DB29B3C86800CB6340 /* City.swift in Sources */,
+				955A226F29B694B80035F3FC /* UIViewConrtoller+Animation.swift in Sources */,
 				95D2A8BD29B3BFBA00CB6340 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,9 +25,11 @@ class CitiesViewController: UIViewController {
         citiesTableView.delegate = self
         citiesTableView.dataSource = self
         registerTableCells()
+        addLoadingAnimation()
         dataService.fetchData { [weak self] result in
             switch result {
             case .success(let cities):
+                self?.removeLoadingAnimation()
                 self?.filteredCities = cities
                 self?.citiesTableView.reloadData()
             case .failure(let failure):
